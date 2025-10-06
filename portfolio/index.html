@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Ririn Portfolio</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Global style */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a001f, #4a004f, #ff0077);
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar container */
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    /* Brand name with typing effect */
+    .brand {
+      font-size: 24px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid #ff4da6;
+      width: 0;
+      animation: typing 3s steps(20, end) forwards, blink .8s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 8ch }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    /* Social links */
+    .social-links a {
+      color: #ff80bf;
+      margin-left: 20px;
+      font-size: 20px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #ff4da6;
+      transform: scale(1.2);
+    }
+
+    /* Main section */
+    .container {
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 40px;
+      max-width: 1000px;
+      align-items: center;
+    }
+
+    /* Left section */
+    .about {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .about h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #ff4da6;
+    }
+
+    /* Right section */
+    .logo-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      height: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-box:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-box img {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="brand">Al Ririn</div>
+    <div class="social-links">
+      <a href="https://github.com/Alririn" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/al_ririn_id/?hl=en#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@al_ririn_id?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://youtube.com/@al_ririn?si=d6MfeSVAs1mETGap" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container">
+    <!-- Left: About -->
+    <div class="about">
+      <h1>About Me</h1>
+      <p>Passionate about <strong>AI Engineering</strong> and <strong>Computer Science</strong>. 
+        Exploring innovation and future technologies. 🚀</p>
+    </div>
+
+    <!-- Right: Logo Placeholder -->
+    <div class="logo-box">
+      <img src="png/alririn.png" alt="My Logo" width="200px" height="200px">
+    </div>
+  </div>
+</body>
+</html>
