@@ -8,18 +8,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* Global style */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #1a001f, #4a004f, #ff0077);
       color: white;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    /* Navbar container */
     nav {
       position: fixed;
       top: 20px;
@@ -31,7 +29,6 @@
       padding: 0 40px;
     }
 
-    /* Brand name with typing effect */
     .brand {
       font-size: 24px;
       font-weight: bold;
@@ -42,29 +39,17 @@
       animation: typing 3s steps(20, end) forwards, blink .8s infinite;
     }
 
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 8ch }
-    }
+    @keyframes typing { from { width: 0 } to { width: 8ch } }
+    @keyframes blink { 50% { border-color: transparent } }
 
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-
-    /* Social links */
     .social-links a {
       color: #ff80bf;
       margin-left: 20px;
       font-size: 20px;
       transition: color 0.3s, transform 0.3s;
     }
+    .social-links a:hover { color: #ff4da6; transform: scale(1.2); }
 
-    .social-links a:hover {
-      color: #ff4da6;
-      transform: scale(1.2);
-    }
-
-    /* Main section */
     .container {
       margin: auto;
       display: grid;
@@ -73,9 +58,9 @@
       padding: 40px;
       max-width: 1000px;
       align-items: center;
+      margin-top: 100px; /* supaya navbar tak cover */
     }
 
-    /* Left section */
     .about {
       font-size: 18px;
       line-height: 1.6;
@@ -87,7 +72,6 @@
       color: #ff4da6;
     }
 
-    /* Right section */
     .logo-box {
       display: flex;
       justify-content: center;
@@ -97,13 +81,55 @@
       height: 250px;
       transition: transform 0.3s ease;
     }
+    .logo-box:hover { transform: scale(1.05); }
+    .logo-box img { border-radius: 50%; }
 
-    .logo-box:hover {
-      transform: scale(1.05);
+    /* My Journey Section */
+    .journey {
+      text-align: center;
+      margin: 60px 0 40px 0;
+    }
+    .journey h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #ff4da6;
     }
 
-    .logo-box img {
-      border-radius: 50%;
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px #ff80bf;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: rgba(255,77,166,0.2);
+      box-shadow: 0 0 20px #ff4da6, 0 0 40px #ff80bf;
+    }
+
+    .card i {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #ff80bf;
+      text-shadow: 0 0 5px #ff4da6, 0 0 10px #ff80bf;
     }
   </style>
 </head>
@@ -112,26 +138,42 @@
   <nav>
     <div class="brand">Al Ririn</div>
     <div class="social-links">
-      <a href="https://github.com/Alririn" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.instagram.com/al_ririn_id/?hl=en#" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@al_ririn_id?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
       <a href="https://youtube.com/@al_ririn?si=d6MfeSVAs1mETGap" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/al_ririn_id" target="_blank"><i class="fab fa-x"></i></a>
     </div>
   </nav>
 
   <!-- Main content -->
   <div class="container">
-    <!-- Left: About -->
     <div class="about">
       <h1>About Me</h1>
       <p>Passionate about <strong>AI Engineering</strong> and <strong>Computer Science</strong>. 
         Exploring innovation and future technologies. 🚀</p>
     </div>
-
-    <!-- Right: Logo Placeholder -->
     <div class="logo-box">
       <img src="png/alririn.png" alt="My Logo" width="200px" height="200px">
     </div>
   </div>
+
+  <!-- My Journey Section -->
+  <div class="journey">
+    <h2>My Journey</h2>
+    <div class="cards">
+      <a href="https://roadmap.sh/u/alririn" class="card" target="_blank">
+        <i class="fas fa-code"></i>
+        Roadmap
+      </a>
+      <a href="https://github.com/Alririn" class="card" target="_blank">
+        <i class="fab fa-github"></i>
+        GitHub
+      </a>
+    </div>
+  </div>
+
+  <script>
+    console.log('alririn');
+  </script>
 </body>
 </html>
