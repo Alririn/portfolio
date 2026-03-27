@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Al Ririn Portfolio</title>
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -11,8 +12,8 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1a001f, #4a004f, #ff0077);
-      color: white;
+      background: #0a0a0a;
+      color: #eaeaea;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -43,12 +44,21 @@
     @keyframes blink { 50% { border-color: transparent } }
 
     .social-links a {
-      color: #ff80bf;
+      color: #aaa;
       margin-left: 20px;
       font-size: 20px;
       transition: color 0.3s, transform 0.3s;
     }
-    .social-links a:hover { color: #ff4da6; transform: scale(1.2); }
+
+    .social-links a:hover {
+      color: #ff4da6;
+      transform: scale(1.2);
+    }
+
+    /* YouTube putih */
+    .fa-youtube {
+      color: white !important;
+    }
 
     .container {
       margin: auto;
@@ -58,7 +68,7 @@
       padding: 40px;
       max-width: 1000px;
       align-items: center;
-      margin-top: 100px; /* supaya navbar tak cover */
+      margin-top: 100px;
     }
 
     .about {
@@ -76,19 +86,27 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
       border-radius: 20px;
       height: 250px;
       transition: transform 0.3s ease;
+      box-shadow: 0 0 20px rgba(255,77,166,0.2);
     }
-    .logo-box:hover { transform: scale(1.05); }
-    .logo-box img { border-radius: 50%; }
 
-    /* My Journey Section */
+    .logo-box:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-box img {
+      border-radius: 50%;
+    }
+
+    /* Journey Section */
     .journey {
       text-align: center;
       margin: 60px 0 40px 0;
     }
+
     .journey h2 {
       font-size: 32px;
       margin-bottom: 30px;
@@ -103,7 +121,7 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
       backdrop-filter: blur(10px);
       border-radius: 20px;
       width: 200px;
@@ -116,12 +134,12 @@
       color: white;
       font-size: 18px;
       transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 10px #ff80bf;
+      box-shadow: 0 0 10px rgba(255,77,166,0.3);
     }
 
     .card:hover {
       transform: scale(1.05);
-      background: rgba(255,77,166,0.2);
+      background: rgba(255,77,166,0.15);
       box-shadow: 0 0 20px #ff4da6, 0 0 40px #ff80bf;
     }
 
@@ -133,38 +151,53 @@
     }
   </style>
 </head>
+
 <body>
+
   <!-- Navbar -->
   <nav>
     <div class="brand">Al Ririn🍉</div>
     <div class="social-links">
-      <a href="https://www.instagram.com/al_ririn_id/?hl=en#" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@al_ririn_id?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://youtube.com/@al_ririn?si=d6MfeSVAs1mETGap" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://x.com/al_ririn_id" target="_blank"><i class="fab fa-x"></i></a>
+      <a href="https://www.instagram.com/al_ririn_id/?hl=en#" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@al_ririn_id" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://youtube.com/@al_ririn" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://x.com/al_ririn_id" target="_blank">
+        <i class="fab fa-x"></i>
+      </a>
     </div>
   </nav>
 
-  <!-- Main content -->
+  <!-- Main -->
   <div class="container">
     <div class="about">
       <h1>About Me</h1>
-      <p>Passionate about <strong>AI Engineering</strong> and <strong>Computer Science</strong>. 
-        Exploring innovation and future technologies.</p>
+      <p>
+        Passionate about <strong>AI Engineering</strong> and 
+        <strong>Computer Science</strong>. Exploring innovation and future technologies.
+      </p>
     </div>
+
     <div class="logo-box">
-      <img src="png/alririn.png" alt="My Logo" width="200px" height="200px">
+      <img src="png/R.png" alt="My Logo" width="200px" height="200px">
     </div>
   </div>
 
-  <!-- My Journey Section -->
+  <!-- Journey -->
   <div class="journey">
     <h2>My Journey</h2>
+
     <div class="cards">
-      <a href="https://roadmap.sh/card/tall/656b13db5145316d25a7621a?variant=dark&roadmaps=%2Ccomputer-science%2Cai-data-scientist%2Cdatastructures-and-algorithms" class="card" target="_blank">
+      <a href="https://roadmap.sh" class="card" target="_blank">
         <i class="fas fa-code"></i>
         Roadmap
       </a>
+
       <a href="https://github.com/Alririn" class="card" target="_blank">
         <i class="fab fa-github"></i>
         GitHub
@@ -173,14 +206,8 @@
   </div>
 
   <script>
-    console.log('alririn');
+    console.log('alririn dark mode');
   </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
