@@ -83,14 +83,8 @@
     }
 
     .logo-box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(255,255,255,0.05);
-      border-radius: 20px;
-      height: 250px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 0 20px rgba(255,77,166,0.2);
+      width: 400px;
+      height: 225px; /* ratio 16:9 */
     }
 
     .logo-box:hover {
@@ -98,7 +92,10 @@
     }
 
     .logo-box img {
-      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px; /* sikit rounded je */
     }
 
     /* Journey Section */
